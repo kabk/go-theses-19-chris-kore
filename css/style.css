@@ -1,0 +1,308 @@
+@media screen {
+  
+  html, body {
+  height: 100%;
+}
+
+@font-face {
+  font-family: "OratorStd";
+  src: url("fonts/OratorStd.otf");
+}
+
+@font-face {
+  font-family: "AT Apoc";
+  src: url("fonts/AT Apoc Revelations.ttf");
+}
+
+body {
+  background-color: #000000;
+  margin: 0;
+  font-family: Helvetica, sans-serif;;
+  overflow: hidden;
+}
+
+a {
+  color: #ffffff;
+}
+
+
+
+#info {
+  position: relative;
+  width: 100%;
+  color: #ffffff;
+  top: 2.1%;
+  right: 30%;
+  padding: 5px;
+  font-family: 'AT Apoc', serif;
+  font-size: 45px;
+  font-weight: lighter;
+  text-align: center;
+  z-index: 1;
+}
+
+#menu {
+  position: absolute;
+  bottom: 92%;
+  left: 32%;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.element {
+  width: 350px;
+  height: 350px;
+  text-align: center;
+  cursor: default;
+}
+
+.element:hover {
+  box-shadow: 0px 0px 12px rgba(228, 228, 228, 0.75);
+  border: 1.3px solid rgb(0, 238, 255);
+}
+
+.element .symbol {
+  position: absolute;
+  top: 220px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  font-family: 'AT Apoc', serif;
+  font-weight: lighter;
+  font-size: 90px;
+  
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.95);
+  
+}
+
+.element .details {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  font-family: 'AT Apoc', serif;
+  font-weight: lighter;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.75);
+  z-index:-1
+}
+
+.page {
+  position: absolute;
+  top: 10%; left: 10%;
+  bottom: 10%; right: 10%;
+  padding: 1em;
+  background: rgb(0, 0, 0);
+  
+  box-sizing: border-box;
+  display: none;
+  font-family: "AT Apoc", serif;
+  font-weight: lighter;
+  font-size: 75px;
+  border: 3px solid rgb(103, 47, 255);
+  box-shadow: 0px 0px 40px rgba(25, 255, 255, 0.8);
+}
+.page > div:first-child {
+  position: absolute;
+  top: 0.03em; left: 1em; 
+  bottom: 0.03em; right: 0.2em;
+  overflow-y: auto; 
+}
+
+p.text {
+  color: #ffffff;
+  padding-right: 0.9em;
+}
+p.chapter {
+  color: #ffffff;
+  font-style: bold;
+  padding-right: 0.9em;
+  
+}
+p.phrase {
+  color: #000000;
+  font-style: italic;
+  padding-right: 0.9em; 
+  
+}
+
+@supports 
+  ((-webkit-text-stroke-color: #666)
+  and
+  (-webkit-text-fill-color: white))
+  or
+  ((-moz-text-stroke-color: #666)
+  and
+  (-moz-text-fill-color: white)) {
+  p.phrase {
+       -moz-text-fill-color: rgb(0, 0, 0);
+    -webkit-text-fill-color: rgb(0, 0, 0);
+       -moz-text-stroke-color: rgb(255, 255, 255);
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+       -moz-text-stroke-width: 0.005em;  
+    -webkit-text-stroke-width: 0.005em;
+  }
+  a.footnote {
+    font-size: 25px;
+    font-weight: normal;
+    color: #ffffff;
+    vertical-align: 98%;
+  }
+
+  p.imagecapture {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  .photo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .image-frame{
+    border: 3px solid rgb(103, 47, 255);
+    box-shadow: 0px 0px 40px rgba(25, 255, 255, 0.8);
+  }
+
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    
+  }
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3); 
+            box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3); 
+  }
+  ::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.5); 
+            box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.5); 
+  }
+
+  .page .btn-close {
+    position: absolute;
+    top: 0em; right: 0.6em;
+    width: 0.8em;
+    height: 2.3em;
+    display: inline-block;
+  }
+
+  .page .btn-close:after {
+    content: "x"; 
+    color: #ffffff;
+    font-size: 0.5em;
+    position: relative;
+    top: -0.6em; right: -0.8em;
+
+  }
+
+
+
+
+
+  button {
+    color: rgba(255, 255, 255, 0.75);
+    background: transparent;
+    border: 0px;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-family: 'AT Apoc', serif;
+    font-weight: lighter;
+    font-size: 60px;
+    
+  }
+  button:hover {
+    outline: 1px solid rgba(25, 255, 186,0.75);
+  }
+  button:active {
+    color: #c4c4c4;
+    background-color: rgba(25, 255, 186,0.75);
+    
+  }
+
+  .miniatura {
+    opacity: 0.8;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+}
+
+
+
+
+
+@media print {
+
+
+  html, body {
+    margin: 0;
+    color: #000;
+    background-color: #fff;
+  }
+  
+  @font-face {
+    font-family: "AT Apoc";
+    src: url("fonts/AT Apoc Revelations.ttf");
+  }
+
+  header, footer, aside, nav, form, iframe, .menu, .hero, .adslot {
+    display: none !important;
+  }
+ 
+
+.page {
+
+  display: block !important;  
+  box-sizing: border-box;
+  margin-left: 1cm;
+  margin-right: 2cm;
+  word-wrap: break-word;
+font-family: "AT Apoc", serif;
+font-weight: lighter;
+font-size: 45px;
+page-break-before: always;
+  }
+  
+
+  p.text {
+    color: #000000;
+    margin-left: 17%;
+    
+  }
+  p.chapter {
+    color: #000000;
+    font-style: bold;  
+  }
+  p.phrase {
+color: #000000;
+    font-style: italic;
+    margin-right: 17%;
+
+
+  }
+  
+  a.footnote {
+    font-size: 15px;
+    font-weight: normal;
+    color: #000000;
+    vertical-align: 98%;
+  }
+
+  
+  img {
+    max-width: 100%;
+
+    }
+    .image-frame{
+      border: 1px solid rgb(0, 0, 0);
+      box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.8);
+    }
+}
+
